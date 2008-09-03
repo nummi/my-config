@@ -52,6 +52,8 @@ alias sudo='nocorrect sudo'
 alias webserver='cd /Library/WebServer/Documents'
 alias projects='cd ~/Projects'
 
+alias myconfig='cd /Users/nummi/Projects/config'
+
 alias sanky='cd ~/Projects/sankyinc'
 alias igv='cd ~/Projects/igv'
 
