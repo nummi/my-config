@@ -1,4 +1,4 @@
-#commands
+# aliases and functions
 alias c='clear'
 function cd { builtin cd $1 && ls }
 alias :='cd ..'
@@ -8,9 +8,8 @@ alias co='git checkout'
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy"
 alias dbfl='rake db:fixtures:load'
 alias dbmi='rake db:migrate'
+alias dbre='rake db:migrate:reset'
 alias diff='git diff'
-alias ff='open -a firepoo http://localhost:3000'
-alias fixl='rake db:fixtures:load'
 alias g='git'
 function gci { git ci -m '$*' }
 alias gd='git diff | mate'
@@ -20,13 +19,12 @@ alias grep='grep --color --line-number '
 alias h='history'
 alias l='ls'
 alias la='ls -laFh'
-alias lsall='ls -lafh'
 function pman() { man -t "${1}" | open -f -a /Applications/Preview.app }
 alias md='mkdir'
-alias migrate='rake db:migrate'
 alias mv='mv -i'
 alias mysql='/opt/local/bin/mysql5 -u root --socket=/tmp/mysql.sock'
 alias mysqladmin='/opt/local/bin/mysqladmin5 -u root --socket=/tmp/mysql.sock'
+alias opera='open -a Opera http://localhost:3000'
 alias opi='open ./public/images'
 function photoshop { open -a Adobe\ Photoshop\ CS3 $* }
 function preview { open -a Preview $* }
