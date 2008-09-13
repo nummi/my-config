@@ -11,7 +11,7 @@ alias dbmi='rake db:migrate'
 alias dbre='rake db:migrate:reset'
 alias diff='git diff'
 alias g='git'
-function gci { git ci -m '$*' }
+function gci { git ci -m "$*" }
 alias gd='git diff | mate'
 alias gp='git push'
 alias gst='git status'
