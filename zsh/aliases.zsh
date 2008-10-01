@@ -50,17 +50,18 @@ alias sudo='nocorrect sudo'
 alias webserver='cd /Library/WebServer/Documents'
 alias projects='cd ~/Projects'
 
-alias myconfig='cd /Users/nummi/Projects/config'
+alias myconfig='cd ~/Projects/config'
 
 alias sanky='cd ~/Projects/sankyinc'
 alias igv='cd ~/Projects/igv'
 
 alias expo='cd ~/Projects/expo'
+alias sweetlabels='cd ~/Projects/sweet-labels'
 
 alias clients='cd ~/Projects/edgecase/clients'
 alias theedgecase_com='cd ~/Projects/edgecase/theedgecase.com'
-alias toobla='cd ~/Projects/edgecase/clients/toobla/toobla'
-alias scripsafe='cd /Users/nummi/Projects/edgecase/clients/escriptsafe/scripsafe'
+alias toobla='cd ~/Projects/edgecase/clients/toobla'
+alias scripsafe='cd ~/Projects/edgecase/clients/escriptsafe/scripsafe'
 alias streamdeploy='cd ~/Projects/edgecase/clients/stream_deploy/streamdeploy'
-alias diplomas='cd /Users/nummi/Projects/edgecase/clients/diplomas'
-alias prosper='cd /Users/nummi/Projects/edgecase/prosper'
+alias diplomas='cd ~/Projects/edgecase/clients/diplomas'
+alias prosper='cd ~/Projects/edgecase/prosper'
