@@ -30,7 +30,16 @@ function photoshop { open -a Adobe\ Photoshop\ CS3 $* }
 function preview { open -a Preview $* }
 alias pull='git pull'
 alias push='git push'
-alias pushed\?='git cherry -v origin'
+
+function pushed 
+{
+  if [ $@ ]; then
+    git cherry -v origin/$@
+  else
+    git cherry -v origin
+  fi
+}
+
 alias rc='rake cruise'
 function reload() { touch tmp/restart.txt }
 alias restart='reload'
