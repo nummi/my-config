@@ -182,5 +182,6 @@ autocmd BufRead,BufNewFile *.php source ~/.vim/after/ftplugin/php_snippets.vim
 " fuzzyfindertextmate: cmd-e to trigger, cmd-enter to open selected file in new tab
 let g:FuzzyFinderOptions = { 'Base':{}, 'Buffer':{}, 'File':{}, 'Dir':{}, 'MruFile':{}, 'MruCmd':{}, 'FavFile':{}, 'Tag':{}, 'TaggedFile':{}}
 let g:FuzzyFinderOptions.Base.key_open_tab = '<D-CR>'
+let g:fuzzy_ignore = 'vendor/**/*; coverage/**/*;'
 map <D-e> :FuzzyFinderTextMate<CR>
 
