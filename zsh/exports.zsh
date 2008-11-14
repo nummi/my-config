@@ -31,8 +31,7 @@ if [[ -z $DISPLAY && -z $SSH_CONNECTION && -o interactive ]]; then
 fi
 # END: Set the DISPLAY
 
-export PATH="/opt/local/lib/postgresql82/bin/:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/sw/bin:/usr/local/bin"
-export PATH="/opt/local/lib/postgresql83/bin:$PATH"
+export PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/sw/bin:/usr/local/bin"
 export EVENT_NOKQUEUE=1 # for memcache
 
 export EDITOR='mate -w'
