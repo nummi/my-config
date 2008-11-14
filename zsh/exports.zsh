@@ -40,3 +40,6 @@ export PS1='%2/ ~ '
 
 export TERM=xterm-color
 export LSCOLORS=gxfxcxdxbxegedabagacad
+
+export CDPATH=$CDPATH:~/Projects:~/Projects/edgecase
+setopt auto_cd
