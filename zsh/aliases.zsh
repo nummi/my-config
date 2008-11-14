@@ -8,7 +8,6 @@ alias co='git checkout'
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy"
 alias dbfl='rake db:fixtures:load'
 alias dbmi='rake db:migrate'
-alias dbre='rake db:migrate:reset'
 alias diff='git diff'
 alias g='git'
 function gci { git ci -m "$*" }
@@ -22,15 +21,18 @@ alias la='ls -laFh'
 function pman() { man -t "${1}" | open -f -a /Applications/Preview.app }
 alias md='mkdir'
 alias mv='mv -i'
-alias mysql='/opt/local/bin/mysql5 -u root --socket=/tmp/mysql.sock'
-alias mysqladmin='/opt/local/bin/mysqladmin5 -u root --socket=/tmp/mysql.sock'
+##alias mysql='/opt/local/bin/mysql5 -u root --socket=/tmp/mysql.sock'
+alias mysql='/opt/local/bin/mysql5 -u root'
+##alias mysqladmin='/opt/local/bin/mysqladmin5 -u root --socket=/tmp/mysql.sock'
+alias mysqladmin='/opt/local/bin/mysqladmin5 -u root'
+alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
+alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
 alias opera='open -a Opera http://localhost:3000'
 alias opi='open ./public/images'
 function photoshop { open -a Adobe\ Photoshop\ CS3 $* }
 function preview { open -a Preview $* }
 alias pull='git pull'
 alias push='git push'
-
 function pushed 
 {
   if [ $@ ]; then
@@ -39,7 +41,7 @@ function pushed
     git cherry -v origin
   fi
 }
-
+alias pushed\?='pushed'
 alias rc='rake cruise'
 function reload() { touch tmp/restart.txt }
 alias restart='reload'
@@ -64,6 +66,9 @@ alias myconfig='cd ~/Projects/config'
 alias sanky='cd ~/Projects/sankyinc'
 alias igv='cd ~/Projects/igv'
 
+alias q1='cd ~/Projects/q1'
+alias gca_stats='cd ~/Projects/q1/gca_stats'
+
 alias expo='cd ~/Projects/expo'
 alias sweetlabels='cd ~/Projects/sweet-labels'
 
@@ -74,3 +79,4 @@ alias scripsafe='cd ~/Projects/edgecase/clients/escriptsafe/scripsafe'
 alias streamdeploy='cd ~/Projects/edgecase/clients/stream_deploy/streamdeploy'
 alias diplomas='cd ~/Projects/edgecase/clients/diplomas'
 alias prosper='cd ~/Projects/edgecase/prosper'
+alias wildresearch='cd ~/Projects/edgecase/clients/wildresearch'
