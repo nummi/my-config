@@ -30,4 +30,5 @@
   st = status
   
 unpushed = cherry -v origin
+pushed = cherry -v origin
 ch = cherry -v origin
