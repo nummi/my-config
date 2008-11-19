@@ -6,7 +6,7 @@ source ~/.zsh/history.zsh
 source ~/.zsh/functions.zsh
 
 
-# color module
+# COLOR MODULE
 autoload colors ; colors
 
 
