@@ -6,14 +6,11 @@ source ~/.zsh/history.zsh
 source ~/.zsh/functions.zsh
 source ~/.zsh/completion.zsh
 
-
 # COLOR MODULE
 autoload colors ; colors
 
-
 # Keeps the paths from growing too big    
 typeset -U path manpath fpath
-
 
 # MISC CONFIG
 setopt append_history 
