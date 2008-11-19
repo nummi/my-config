@@ -28,7 +28,7 @@ alias sc='./script/console'
 alias sfl='rake spec:db:fixtures:load'
 alias sp='./script/spec -cfs'
 alias ss='./script/server'
-alias st='git status'
+alias st='clear; git status'
 alias sudo='nocorrect sudo'
 
 
