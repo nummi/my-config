@@ -18,3 +18,13 @@ function pushed
 }
 
 function reload() { touch tmp/restart.txt }
+
+# Force 'sudo zsh' to start root as a loging shell to 
+# avoid problems with environment clashes:
+function sudo {
+	if [[ $1 = "zsh" ]]; then
+        command sudo /opt/local/bin/zsh -l
+	else
+        command sudo "$@"
+	fi
+}

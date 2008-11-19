@@ -32,21 +32,6 @@ zstyle ':completion:*' verbose yes
 zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*'   force-list always
 
-# Prevent SVN files/directories from being completed:
-zstyle ':completion:*:(all-|)files' ignored-patterns '(|*/)SVN'
-zstyle ':completion:*:cd:*' ignored-patterns '(*/)#SVN'
-
 ## With commands like `rm' it's annoying if one gets offered the same filename
 ## again even if it is already on the command line. To avoid that:
 zstyle ':completion:*:rm:*' ignore-line yes
-
-
-# Force 'sudo zsh' to start root as a loging shell to 
-# avoid problems with environment clashes:
-function sudo {
-	if [[ $1 = "zsh" ]]; then
-        command sudo /opt/local/bin/zsh -l
-	else
-        command sudo "$@"
-	fi
-}
