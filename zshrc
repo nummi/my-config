@@ -4,6 +4,7 @@ source ~/.zsh/bindkeys.zsh
 source ~/.zsh/completion_rake.zsh
 source ~/.zsh/history.zsh
 source ~/.zsh/functions.zsh
+source ~/.zsh/completion.zsh
 
 
 # COLOR MODULE
