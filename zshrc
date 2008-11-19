@@ -3,6 +3,7 @@ source ~/.zsh/aliases.zsh
 source ~/.zsh/bindkeys.zsh
 source ~/.zsh/completion_rake.zsh
 source ~/.zsh/history.zsh
+source ~/.zsh/functions.zsh
 
 
 # color module
@@ -17,7 +18,6 @@ typeset -U path manpath fpath
 setopt append_history 
 setopt inc_append_history 
 setopt HIST_FIND_NO_DUPS
-
 setopt complete_in_word         # Not just at the end
 setopt always_to_end            # When complete from middle, move cursor
 setopt nohup										# In general, we don't kill background jobs upon logging out
@@ -32,7 +32,7 @@ zstyle ':completion:*' verbose yes
 zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*'   force-list always
 
-# Prevent CVS/SVN files/directories from being completed:
+# Prevent SVN files/directories from being completed:
 zstyle ':completion:*:(all-|)files' ignored-patterns '(|*/)SVN'
 zstyle ':completion:*:cd:*' ignored-patterns '(*/)#SVN'
 
