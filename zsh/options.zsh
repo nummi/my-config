@@ -1,5 +1,6 @@
 setopt always_to_end            # COMPLETION   - When auto complete from middle, complete and move cursor to end of word
 setopt append_history           # HISTORY      - Append to history file, not overwrite it
+setopt auto_cd
 setopt AUTO_LIST                # COMPLETION   - Automatically list choices on an ambiguous completion
 setopt complete_in_word         # COMPLETION   - Always auto complete, not just at the end
 setopt correct                  # INPUT/OUTPUT - Try to correct the spelling of commands
