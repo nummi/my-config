@@ -8,8 +8,7 @@ function photoshop { open -a Adobe\ Photoshop\ CS3 $* }
 
 function preview { open -a Preview $* }
 
-function pushed 
-{ 
+function pushed {
   if [ $@ ]; then
     git cherry -v origin/$@
   else
@@ -30,10 +29,11 @@ function sudo {
 }
 
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/branch:\1/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/branch:\1 ~ /'
 }
-parse_git_branch2() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\/\1/'
+
+get_git_branch_name() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
  
 # Anything unpushed?
@@ -52,8 +52,7 @@ git_prompt_info() {
     # echo "$fg[green]$branch_prompt$reset_color $(git_status)"
   fi
 }
- 
-    
+
 # Put the string "hostname::/full/directory/path" in the title bar:
 set_term_title() { 
   echo -ne "\e]2;$PWD\a" 
@@ -71,13 +70,16 @@ set_running_app() {
 precmd() { 
   set_term_title
   set_term_tab
-  export RPS1=$(git_status)
   
   export PS1='%2/ ~ '
+  export RPS1="$(git_status)"
   
   branch_prompt=$(parse_git_branch)
   if [ -n "$branch_prompt" ]; then
-    export PS1="$branch_prompt ~ "
+    export PS1="$(parse_git_branch)"
+    # if unpushed
+    # export RPS1="$RPS1 - unpushed"
+    # fi
   fi
 }
  
