@@ -29,18 +29,62 @@ function sudo {
   fi
 }
 
-# Ehren's Stuff
-set_prompt () {
-  export RPROMPT=$(project_name)$(git_prompt_info)
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/branch:\1/'
 }
-project_name () {
-  name=$(pwd | awk -F'edgecase/clients/' '{print $2}' | awk -F/ '{print $1}')
-  echo "%{\e[0;35m%}${name}%{\e[0m%}"
+parse_git_branch2() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\/\1/'
 }
-git_prompt_info () {
- ref=$(git-symbolic-ref HEAD 2> /dev/null) || return
- echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
+ 
+# Anything unpushed?
+git_status() {
+  if current_git_status=$(git status 2> /dev/null | grep 'added to commit' 2> /dev/null); then
+    echo "⚡"
+  else
+    echo ''
+  fi
 }
-precmd() {
-  set_prompt
+ 
+git_prompt_info() {
+  branch_prompt=$(parse_git_branch)
+  if [ -n "$branch_prompt" ]; then
+    echo "$branch_prompt"
+    # echo "$fg[green]$branch_prompt$reset_color $(git_status)"
+  fi
+}
+ 
+    
+# Put the string "hostname::/full/directory/path" in the title bar:
+set_term_title() { 
+  echo -ne "\e]2;$PWD\a" 
+}
+ 
+# Put the parentdir/currentdir in the tab
+set_term_tab() {
+  echo -ne "\e]1;$PWD:h:t/$PWD:t\a" 
+}
+ 
+set_running_app() {
+ printf "\e]1; $PWD:t:$(history $HISTCMD | cut -b7- ) \a"
+}
+ 
+precmd() { 
+  set_term_title
+  set_term_tab
+  export RPS1=$(git_status)
+  
+  export PS1='%2/ ~ '
+  
+  branch_prompt=$(parse_git_branch)
+  if [ -n "$branch_prompt" ]; then
+    export PS1="$branch_prompt ~ "
+  fi
+}
+ 
+preexec() { 
+  set_running_app
+}
+ 
+postexec() {
+  set_running_app
 }

@@ -16,7 +16,8 @@ export PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/bin:/sbin:/usr/bin:
 export EVENT_NOKQUEUE=1 # for memcache
 
 export EDITOR='mate -w'
-export PS1='%2/ ~ '
+#export PS1='%2/ ~ '
+#export PS1='%{$reset_color$fg[gray]%}%2~%{$reset_color$bold_color$fg[green]%}$(git_prompt_info)>%{$reset_color%} ' 
 
 export TERM=xterm-color
 export LSCOLORS=gxfxcxdxbxegedabagacad
