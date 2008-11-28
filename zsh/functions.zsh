@@ -36,7 +36,7 @@ get_git_branch_name() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
  
-# Anything unpushed?
+# Anything not checked in?
 git_status() {
   if current_git_status=$(git status 2> /dev/null | grep 'added to commit' 2> /dev/null); then
     echo "⚡"
