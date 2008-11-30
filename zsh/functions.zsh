@@ -44,7 +44,7 @@ git_status() {
     echo ''
   fi
 }
- 
+
 git_prompt_info() {
   branch_prompt=$(parse_git_branch)
   if [ -n "$branch_prompt" ]; then
@@ -76,7 +76,7 @@ precmd() {
   
   branch_prompt=$(parse_git_branch)
   if [ -n "$branch_prompt" ]; then
-    export PS1="$(parse_git_branch)"
+    export PS1="%1//$(parse_git_branch)"
     # if unpushed
     # export RPS1="$RPS1 - unpushed"
     # fi
