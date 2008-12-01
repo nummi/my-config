@@ -1,10 +1,6 @@
 function cd() { builtin cd $1 && ls }
 
-function gci() { git ci -m "$*" }
-
 function pman() { man -t "${1}" | open -f -a /Applications/Preview.app }
-
-function photoshop() { open -a Adobe\ Photoshop\ CS3 $* }
 
 function preview() { open -a Preview $* }
 
@@ -19,7 +15,7 @@ function pushed() {
 function reload() { touch tmp/restart.txt }
 
 # Force 'sudo zsh' to start root as a loging shell to 
-# avoid problems with environment clashes:
+# avoid problems with environment clashes
 function sudo() {
   if [[ $1 = "zsh" ]]; then
     command sudo /opt/local/bin/zsh -l
@@ -34,6 +30,13 @@ parse_git_branch() {
 
 get_git_branch_name() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+
+need_push() {
+  if [[ "$(pushed)" == "" ]]
+    then echo ""
+  else echo "- unpushed"
+  fi
 }
  
 # Anything not checked in?
@@ -77,9 +80,8 @@ precmd() {
   branch_prompt=$(parse_git_branch)
   if [ -n "$branch_prompt" ]; then
     export PS1="%1//$(parse_git_branch)"
-    # if unpushed
-    # export RPS1="$RPS1 - unpushed"
-    # fi
+    
+    export RPS1="$RPS1 $(need_push)"
   fi
 }
  
