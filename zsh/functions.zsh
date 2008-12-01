@@ -48,14 +48,6 @@ git_status() {
   fi
 }
 
-git_prompt_info() {
-  branch_prompt=$(parse_git_branch)
-  if [ -n "$branch_prompt" ]; then
-    echo "$branch_prompt"
-    # echo "$fg[green]$branch_prompt$reset_color $(git_status)"
-  fi
-}
-
 # Put the string "hostname::/full/directory/path" in the title bar:
 set_term_title() { 
   echo -ne "\e]2;$PWD\a" 
@@ -75,13 +67,13 @@ precmd() {
   set_term_tab
   
   export PS1='%2/ ~ '
-  export RPS1="$(git_status)"
+  export RPS1="%{$fg[yellow]%}$(git_status)%{$reset_color%}"
   
   branch_prompt=$(parse_git_branch)
   if [ -n "$branch_prompt" ]; then
     export PS1="%1//$(parse_git_branch)"
     
-    export RPS1="$RPS1 $(need_push)"
+    export RPS1="$RPS1 %{$fg[yellow]%}$(need_push)%{$reset_color%}"
   fi
 }
  
