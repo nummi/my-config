@@ -32,14 +32,16 @@ get_git_branch_name() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
+# Did you forget to `git push`?
 need_push() {
-  if [[ "$(pushed)" == "" ]]
+  result=$(get_git_branch_name | pushed)
+  if [[ $result == "" ]]
     then echo ""
   else echo "- unpushed"
   fi
 }
  
-# Anything not checked in?
+# Did you forget to `git commit`?
 git_status() {
   if current_git_status=$(git status 2> /dev/null | grep 'added to commit' 2> /dev/null); then
     echo "⚡"
