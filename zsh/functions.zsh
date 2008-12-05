@@ -8,7 +8,7 @@ function pushed() {
   if [ $@ ]; then
     git cherry -v origin/$@
   else
-    git cherry -v origin
+    git cherry -v origin/$(get_git_branch_name)
   fi
 }
 
@@ -43,7 +43,7 @@ need_push() {
  
 # Did you forget to `git commit`?
 git_status() {
-  if current_git_status=$(git status 2> /dev/null | grep 'added to commit' 2> /dev/null); then
+  if current_git_status=$(git status 2> /dev/null | grep 'On branch master' 2> /dev/null); then
     echo "⚡"
   else
     echo ''
