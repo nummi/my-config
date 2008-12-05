@@ -34,7 +34,7 @@ get_git_branch_name() {
 
 # Did you forget to `git push`?
 need_push() {
-  result=$(get_git_branch_name | pushed)
+  result=$(pushed $(get_git_branch_name))
   if [[ $result == "" ]]
     then echo ""
   else echo "- unpushed"
