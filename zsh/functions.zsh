@@ -37,7 +37,7 @@ need_push() {
   result=$(pushed $(get_git_branch_name))
   if [[ $result == "" ]]
     then echo ""
-  else echo "unpushed"
+  else echo "unpushed!"
   fi
 }
  
