@@ -25,7 +25,7 @@ function sudo() {
 }
 
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/branch:\1 ~ /'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1) ~ /'
 }
 
 get_git_branch_name() {
@@ -73,7 +73,7 @@ precmd() {
   
   branch_prompt=$(parse_git_branch)
   if [ -n "$branch_prompt" ]; then
-    export PS1="%1//$(parse_git_branch)"
+    export PS1="%2/$(parse_git_branch)"
     
     export RPS1="$RPS1 %{$fg[yellow]%}$(need_push)%{$reset_color%}"
   fi
