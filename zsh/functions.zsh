@@ -43,7 +43,7 @@ need_push() {
  
 # Did you forget to `git commit`?
 git_status() {
-  if current_git_status=$(git status 2> /dev/null | grep 'On branch master' 2> /dev/null); then
+  if current_git_status=$(git status 2> /dev/null | grep --regex="modified\|Untracked" 2> /dev/null); then
     echo "⚡"
   else
     echo ''
