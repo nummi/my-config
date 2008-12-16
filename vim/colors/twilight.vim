@@ -35,15 +35,15 @@ hi WildMenu       guifg=#AFC4DB           guibg=#0E2231
 
 hi Comment        guifg=#8F9D6A
 hi Constant       guifg=#CF6A4C
-hi String         guifg=#ddf2a4
+hi String         guifg=#8F9D6A
 hi Character      guifg=#E9C062
 hi Number         guifg=#9B859D
 hi Boolean        guifg=#CF6A4C
 hi Float          guifg=#562D56
-hi Identifier     guifg=#7587a6
-hi Function       guifg=#8F9D6A
+hi Identifier     guifg=#9B703F
+hi Function       guifg=#9B5C2E
 hi Statement      guifg=#CF7D34
-hi Conditional    guifg=#D2A8A1
+hi Conditional    guifg=#9B703F
 hi Repeat         guifg=khaki
 hi Label          guifg=#E9C062
 hi Operator       guifg=#CF6A4C
