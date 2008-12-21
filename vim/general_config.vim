@@ -1,5 +1,7 @@
   scriptencoding utf-8
 
+  set guioptions=e
+
 " Set temporary directory (don't litter local dir with swp/tmp files)
   set directory=/tmp/
 
