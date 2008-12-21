@@ -6,6 +6,7 @@ source ~/.zsh/bindkeys.zsh
 source ~/.zsh/completion_rake.zsh
 source ~/.zsh/history.zsh
 source ~/.zsh/completion.zsh
+# source ~/.zsh/magic_prediction.zsh
 
 # Keeps the paths from growing too big    
 typeset -U path manpath fpath
