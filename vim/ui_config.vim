@@ -32,5 +32,5 @@
   let g:rails_statusline=0
  
 " make it pretty
-  colors twilight2
+  colors wombat
 
