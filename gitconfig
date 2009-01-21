@@ -31,3 +31,4 @@
   
 unpushed = cherry -v origin
 ch = cherry -v origin
+mine = log --author=Jerry
