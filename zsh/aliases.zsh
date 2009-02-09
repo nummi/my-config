@@ -7,6 +7,7 @@ alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy"
 alias dbfl='rake db:fixtures:load'
 alias dbmi='rake db:migrate'
 alias diff='git diff'
+alias diffmate='git diff | mate'
 alias g='git'
 alias gd='git diff | mate'
 alias grep='grep --color --line-number '
@@ -54,9 +55,12 @@ alias q1='cd ~/Projects/q1'
 alias gca_stats='cd ~/Projects/q1/gca_stats'
 
 # edgecase
+alias bikeshop='cd ~/Projects/edgecase/clients/bikeshopft'
 alias ccli='cd ~/Projects/edgecase/clients/ccli'
 alias clients='cd ~/Projects/edgecase/clients'
-alias diplomas='cd ~/Projects/edgecase/clients/diplomas'
+alias diplomas='cd ~/Projects/edgecase/clients/diplomas';
+alias fxcm='cd ~/Projects/edgecase/clients/fxcm-uk'
+alias joemetric='cd ~/Projects/joemetric'
 alias prosper='cd ~/Projects/edgecase/prosper'
 alias scripsafe='cd ~/Projects/edgecase/clients/escriptsafe/scripsafe'
 alias streamdeploy='cd ~/Projects/edgecase/clients/streamdeploy'
