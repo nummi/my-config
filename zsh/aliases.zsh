@@ -42,6 +42,7 @@ alias webserver='cd /Library/WebServer/Documents'
 # personal
 alias myconfig='cd ~/Projects/config'
 alias expo='cd ~/Projects/expo'
+alias paperactive='cd ~/Projects/paperactive'
 alias sweetlabels='cd ~/Projects/sweet-labels'
 
 # sanky
