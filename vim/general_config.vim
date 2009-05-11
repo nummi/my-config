@@ -1,12 +1,7 @@
   scriptencoding utf-8
 
-  set guioptions=e
-
 " Set temporary directory (don't litter local dir with swp/tmp files)
   set directory=/tmp/
-
-" Set grep to ack
-  set grepprg=ack\ --noenv\ -a
 
 " have one hundred lines of command-line (etc) history:
   set history=100
@@ -16,7 +11,6 @@
 
 " Highlight matching parens
   set showmatch
-
   set completeopt=menu,preview
   
 " Use the tab complete menu
@@ -56,7 +50,4 @@
 
 " remember last position in file
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
-
-" make arrow keys work in console vi
-  if !has("gui_running") | set term=xterm | endif
 
