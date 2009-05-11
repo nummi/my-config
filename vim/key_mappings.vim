@@ -1,9 +1,6 @@
 " get out of insert mode with cmd-i
   imap <D-i> <Esc>
 
-" tab completion
-  imap <tab> 
-
 " redo with U
   nmap U :redo<cr>
 
