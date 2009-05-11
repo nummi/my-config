@@ -12,6 +12,7 @@ alias g='git'
 alias gd='git diff | mate'
 alias grep='grep --color --line-number '
 alias la='ls -laFh'
+alias monitor_http='sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET \/.*"'
 alias mv='mv -i'
 alias mysql='/opt/local/bin/mysql5 -u root' # --socket=/tmp/mysql.sock
 alias mysqladmin='/opt/local/bin/mysqladmin5 -u root' # --socket=/tmp/mysql.sock
