@@ -5,5 +5,3 @@ bindkey "^E" end-of-line
 bindkey "^B" backward-word
 bindkey "^F" forward-word
 bindkey "^J" self-insert
-#bindkey '^[[D' backward-word # option left
-#bindkey '^[[C' forward-word  # option right

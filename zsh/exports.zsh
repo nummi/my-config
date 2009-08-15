@@ -15,7 +15,7 @@ fi
 export PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/sw/bin:/usr/local/bin"
 export EVENT_NOKQUEUE=1 # for memcache
 
-export EDITOR='mate -w'
+export EDITOR=vim
 
 export TERM=xterm-color
 export LSCOLORS=gxfxcxdxbxegedabagacad
