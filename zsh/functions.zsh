@@ -1,9 +1,5 @@
 function cd() { builtin cd $1 && ls }
 
-function pman() { man -t "${1}" | open -f -a /Applications/Preview.app }
-
-function preview() { open -a Preview $* }
-
 # Force 'sudo zsh' to start root as a loging shell to 
 # avoid problems with environment clashes
 function sudo() {
@@ -14,10 +10,7 @@ function sudo() {
   fi
 }
 
-# Passenger (mod_rails)
-function reload() { touch tmp/restart.txt }
-
-get_git_branch_name() {
+function get_git_branch_name() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
@@ -30,7 +23,7 @@ function pushed() {
 }
 
 # Did you forget to `git push`?
-need_push() {
+function need_push() {
   result=$(pushed $(get_git_branch_name))
   if [[ $result == "" ]]
     then echo ""
@@ -38,8 +31,7 @@ need_push() {
   fi
 }
  
-# Is the git working directory dirty?
-git_status() {
+function is_working_directory_dirty() {
  if current_git_status=$(git status 2> /dev/null | grep --regex="deleted\|modified\|Untracked" 2> /dev/null); then
    echo "⚡"
  else
@@ -48,26 +40,26 @@ git_status() {
 }
  
 # Put the parentdir/currentdir in the tab
-set_term_tab() {
+function set_term_tab() {
   echo -ne "\e]1;$PWD:h:t/$PWD:t\a" 
 }
  
-set_running_app() {
+function set_running_app() {
  printf "\e]1; $PWD:t:$(history $HISTCMD | cut -b7- ) \a"
 }
 
 # Put the string "hostname::/full/directory/path" in the title bar:
-set_term_title() { 
+function set_term_title() { 
   echo -ne "\e]2;$PWD\a" 
 }
 
-set_prompt() {
+function set_prompt() {
   export PS1='%2/ ~ '
 
   branch_prompt=$(get_git_branch_name)
   if [ -n "$branch_prompt" ]; then
-    export PS1="%2/ ($(get_git_branch_name)) ~ "
-    export RPS1="%{$fg[yellow]%}$(git_status) $(need_push)%{$reset_color%}"
+    export PS1="%1/ ($(get_git_branch_name)) ~ "
+    export RPS1="%{$fg[yellow]%}$(is_working_directory_dirty) $(need_push)%{$reset_color%}"
   fi
 }
  
