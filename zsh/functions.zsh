@@ -24,10 +24,10 @@ function pushed() {
 
 # Did you forget to `git push`?
 function need_push() {
-  result=$(pushed $(git_branch_name))
-  if [[ $result == "" ]]
+  if [[ $(pushed $(git_branch_name)) == "" ]]
     then echo ""
-  else echo "unpushed!"
+  else
+    echo "%{\e[0;33m%} ↑%{\e[0m%}"
   fi
 }
  
