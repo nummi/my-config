@@ -27,7 +27,7 @@ function need_push() {
   if [[ $(pushed $(git_branch_name)) == "" ]]
     then echo ""
   else
-    echo "%{\e[0;33m%}↑%{\e[0m%}"
+    echo "%{$fg[yellow]%}↑%{\e[0m%}"
   fi
 }
  
