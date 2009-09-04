@@ -2,16 +2,13 @@ alias :='cd ..'
 alias ::='cd ../..'
 alias :::='cd ../../..'
 
-alias browse='open -a Preview **/*.png **/*.tiff **/*.jpg'
-
 alias c='clear'
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy"
 
 alias diff='git diff'
-alias diffmate='git diff | mate'
 
-alias grep='grep --color --line-number '
 alias gitrm='git ls-files --deleted | xargs git rm'
+alias grep='grep --color --line-number '
 alias gvim='mvim -p'
 
 alias la='ls -laFh'
@@ -29,9 +26,7 @@ alias pull='git pull'
 alias push='git push'
 alias pushed\?='pushed'
 
-alias rc='rake cruise'
 alias rmate='mate app config doc db lib public script spec test stories liquid'
-alias rrr="rake db:migrate && rake db:rollback && rake db:migrate"
 
 alias sc='./script/console'
 alias sp='./script/spec -cfs'
@@ -41,7 +36,6 @@ alias sudo='nocorrect sudo'
 
 
 # shortcuts
-alias projects='cd ~/Projects'
 alias webserver='cd /Library/WebServer/Documents'
 
 # personal
