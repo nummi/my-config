@@ -16,21 +16,22 @@ function git_branch_name() {
 
 function pushed() {
   if [ $@ ]; then
-    git cherry -v origin/$@
+    git cherry -v origin/$@ 2>/dev/null
   else
-    git cherry -v origin/$(git_branch_name)
+    git cherry -v origin/$(git_branch_name) 2>/dev/null
   fi
 }
 
 # Did you forget to `git push`?
 function need_push() {
-  if [[ $(pushed $(git_branch_name)) == "" ]]
-    then echo ""
+  if [[ $(pushed) == "" ]]
+  then
+    echo " "
   else
-    echo "%{$fg[yellow]%}↑%{\e[0m%}"
+    echo "%{$fg[yellow]%} ↑%{\e[0m%}"
   fi
 }
- 
+    
 function is_working_directory_dirty() {
  if current_git_status=$(git status 2> /dev/null | grep --regex="deleted\|modified\|Untracked" 2> /dev/null); then
    echo "⚡"
@@ -59,6 +60,6 @@ function set_prompt() {
   branch_name=$(git_branch_name)
   if [ -n "$branch_name" ]; then
     export PS1="%1/ %{$fg[green]%}($branch_name)%{$reset_color%} ~ "
-    export RPS1="%{$fg[yellow]%}$(is_working_directory_dirty) $(need_push)%{$reset_color%}"
+    export RPS1="%{$fg[yellow]%}$(is_working_directory_dirty)$(need_push)%{$reset_color%}"
   fi
 }
