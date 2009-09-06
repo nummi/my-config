@@ -26,7 +26,7 @@ function pushed() {
 function need_push() {
   if [[ $(pushed) == "" ]]
   then
-    echo " "
+    echo ""
   else
     echo "%{$fg[yellow]%} ↑%{\e[0m%}"
   fi
