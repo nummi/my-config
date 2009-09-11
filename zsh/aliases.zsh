@@ -23,7 +23,7 @@ alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
 alias opi='open ./public/images'
 
 alias pull='git pull'
-alias push='git push'
+alias push='clear; git push'
 alias pushed\?='pushed'
 
 alias rmate='mate app config doc db lib public script spec test stories liquid'
