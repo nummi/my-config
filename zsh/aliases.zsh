@@ -15,10 +15,10 @@ alias la='ls -laFh'
 
 alias monitor_http='sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET \/.*"'
 alias mv='mv -i'
-alias mysql='/opt/local/bin/mysql5 -u root' # --socket=/tmp/mysql.sock
-alias mysqladmin='/opt/local/bin/mysqladmin5 -u root' # --socket=/tmp/mysql.sock
-alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
-alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
+alias mysql='/usr/local/mysql/bin/mysql -u root' # --socket=/tmp/mysql.sock
+alias mysqladmin='/usr/local/mysql/bin/mysqladmin -u root' # --socket=/tmp/mysql.sock
+alias mysqlstart='sudo /usr/local/mysql/bin/mysqld_safe &'
+alias mysqlstop='/usr/local/mysql/bin/mysqladmin -u root -p shutdown'
 
 alias opi='open ./public/images'
 
