@@ -22,7 +22,7 @@ alias mysqlstop='/usr/local/mysql/bin/mysqladmin -u root -p shutdown'
 
 alias opi='open ./public/images'
 
-alias pull='git pull'
+alias pull='clear; git pull'
 alias push='clear; git push'
 alias pushed\?='pushed'
 
