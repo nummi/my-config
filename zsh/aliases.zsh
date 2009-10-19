@@ -44,7 +44,7 @@ alias paperactive='cd ~/Projects/paperactive'
 
 # edgecase
 alias diplomas='cd ~/Projects/edgecase/clients/diplomas';
-alias scripsafe='cd ~/Projects/edgecase/clients/escriptsafe/scripsafe'
+alias scripsafe='cd ~/Projects/edgecase/clients/scripsafe'
 alias sideshooter='cd ~/Projects/edgecase/sideshooter'
 alias streamdeploy='cd ~/Projects/edgecase/clients/streamdeploy'
 alias transcripts='cd ~/Projects/edgecase/clients/transcripts'
