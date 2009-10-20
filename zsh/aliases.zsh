@@ -2,6 +2,8 @@ alias :='cd ..'
 alias ::='cd ../..'
 alias :::='cd ../../..'
 
+alias ack="ack-grep $1"
+
 alias c='clear'
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | xclip"
 
