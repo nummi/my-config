@@ -5,6 +5,3 @@
 " These two enable syntax highlighting
   set nocompatible
   syntax on
-  
-" make it pretty
-  colors wombat
