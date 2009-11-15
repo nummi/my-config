@@ -1,3 +1,6 @@
+" disable help
+  imap <F1> <Esc>a
+
 " toggle insert mode with cmd-i
   imap <D-i> <Esc>
  
