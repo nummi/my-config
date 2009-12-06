@@ -3,6 +3,7 @@ alias ::='cd ../..'
 alias :::='cd ../../..'
 
 alias c='clear'
+alias conkeror="open /Applications/conkeror.mozdev.org/conkeror.app"
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy"
 
 alias diff='git diff'
