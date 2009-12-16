@@ -12,7 +12,7 @@ if [[ -z $DISPLAY && -z $SSH_CONNECTION && -o interactive ]]; then
 fi
 # END: Set the DISPLAY
 
-export PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/sw/bin:/usr/local/bin:/usr/local/mysql/bin"
+export PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/sw/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/mongodb/bin"
 export EVENT_NOKQUEUE=1 # for memcache
 
 export EDITOR=vim
