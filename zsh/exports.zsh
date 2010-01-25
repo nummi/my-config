@@ -17,6 +17,8 @@ export EVENT_NOKQUEUE=1 # for memcache
 
 export EDITOR=vim
 
+export ARCHFLAGS='-arch x86_64'
+
 export TERM=xterm-color
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
