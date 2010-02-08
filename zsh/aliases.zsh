@@ -8,6 +8,7 @@ alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy"
 
 alias diff='git diff'
 
+alias gfo='git fetch origin'
 alias gitrm='git ls-files --deleted | xargs git rm'
 alias grep='grep --color --line-number '
 alias gvim='mvim -p'
@@ -27,7 +28,7 @@ alias pull='clear; git pull'
 alias push='clear; git push'
 alias pushed\?='pushed'
 
-alias rmate='mate app config doc db lib public script spec test stories liquid'
+alias rmate='mate app config doc db features lib public script spec test stories liquid'
 
 alias sc='./script/console'
 alias sp='./script/spec -cfs'
