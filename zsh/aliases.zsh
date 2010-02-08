@@ -2,6 +2,8 @@ alias :='cd ..'
 alias ::='cd ../..'
 alias :::='cd ../../..'
 
+alias add_all='git add .; git status'
+
 alias c='clear'
 alias conkeror="open /Applications/conkeror.mozdev.org/conkeror.app"
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy"
