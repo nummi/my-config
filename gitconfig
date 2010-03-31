@@ -33,3 +33,6 @@
 unpushed = cherry -v origin
 ch = cherry -v origin
 mine = log --author=Jerry
+[git-pair]
+	authors = Jerry Nummi <jerry@theedgecase.com>
+	authors = Jon Distad <jon@theedgecase.com>
