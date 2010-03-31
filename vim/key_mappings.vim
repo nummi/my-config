@@ -1,6 +1,3 @@
-" disable help
-  imap <F1> <Esc>a
-
 " toggle insert mode with cmd-i
   imap <D-i> <Esc>
  
@@ -10,6 +7,9 @@
 " easy wrap toggling
   nmap <Leader>w :set wrap<cr>
   nmap <Leader>W :set nowrap<cr>
+
+" go to the directory listing for the current file
+  nmap gd :e %:h<cr>
  
 " switch windows
   nmap gj j
@@ -39,7 +39,7 @@
   nmap go o<esc>
   nmap gO O<esc>
  
-" Fuzzy Finder - go to launch; gb just for buffers; cmd-enter to open selected file in new tab
+" Fuzzy Finder - \t to launch; \b just for buffers; cmd-enter to open selected file in new tab
   let g:FuzzyFinderOptions = { 'Base':{} }
   let g:FuzzyFinderOptions.Base.key_open_tab = '<D-CR>'
   nmap <Leader>t :FuzzyFinderTextMate<cr> 
