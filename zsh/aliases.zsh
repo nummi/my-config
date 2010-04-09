@@ -2,16 +2,14 @@ alias :='cd ..'
 alias ::='cd ../..'
 alias :::='cd ../../..'
 
-alias add_all='git add .; git status'
-
 alias c='clear'
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy"
 
-alias diff='git diff'
+alias diff='clear; git diff'
 
 alias gfo='git fetch origin'
 alias gitrm='git ls-files --deleted | xargs git rm'
-alias grep='grep --color --line-number '
+alias gitx='gitx --all'
 alias gvim='mvim -p'
 
 alias la='ls -laFh'
@@ -36,18 +34,3 @@ alias sp='./script/spec -cfs'
 alias ss='./script/server'
 alias st='clear; git status'
 alias sudo='nocorrect sudo'
-
-
-# shortcuts
-alias webserver='cd /Library/WebServer/Documents'
-
-# personal
-alias myconfig='cd ~/Projects/config'
-alias paperactive='cd ~/Projects/paperactive'
-
-# edgecase
-alias diplomas='cd ~/Projects/edgecase/clients/diplomas';
-alias scripsafe='cd ~/Projects/edgecase/clients/scripsafe'
-alias sideshooter='cd ~/Projects/edgecase/sideshooter'
-alias streamdeploy='cd ~/Projects/edgecase/clients/streamdeploy'
-alias transcripts='cd ~/Projects/edgecase/clients/transcripts'
