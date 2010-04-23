@@ -44,10 +44,6 @@ function is_working_directory_dirty() {
 function set_term_tab() {
   echo -ne "\e]1;$PWD:h:t/$PWD:t\a" 
 }
- 
-function set_running_app() {
- printf "\e]1; $PWD:t:$(history $HISTCMD | cut -b7- ) \a"
-}
 
 # Put the string "hostname::/full/directory/path" in the title bar:
 function set_term_title() { 
