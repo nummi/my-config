@@ -1,38 +1,52 @@
 [user]
- name = Jerry Nummi
-  email = jerry@theedgecase.com
+ name  = Jerry Nummi
+ email = jerry@edgecase.com
+
 [color]
   branch = auto
-  diff = auto
+  diff   = auto
   status = auto
+
 [color "branch"]
   current = yellow reverse
-  local = yellow
-  remote = green
+  local   = yellow
+  remote  = green
+
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
-  old = red bold
-  new = green bold
+  old  = red bold
+  new  = green bold
+
 [color "status"]
-  added = yellow
-  changed = green
+  added     = yellow
+  changed   = green
   untracked = cyan
+
 [merge]
   tool = opendiff
+
 [core]
   legacyheaders = false
-	autocrlf = input
+	autocrlf = true
+
 [repack]
   usedeltabaseoffset = true
+
 [alias]
-  ci = commit
-  co = checkout
-  st = status
-  
-unpushed = cherry -v origin
-ch = cherry -v origin
-mine = log --author=Jerry
+  ci   = commit
+  co   = checkout
+  st   = status
+  ch   = cherry -v origin
+  mine = log --author=Jerry
+
+[diff "ruby"]
+  funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
+
 [git-pair]
-	authors = Jerry Nummi <jerry@theedgecase.com>
-	authors = Jon Distad <jon@theedgecase.com>
+	authors = Adam McCrea <adam@edgecase.com>
+	authors = Leon Gersing <fallenrogue@gmail.com>
+	authors = Felix Flores <felix@edgecase.com>
+	authors = Jerry Nummi <jerry@edgecase.com>
+	authors = John Andrews <john.m.andrews@gmail.com>
+	authors = Craig Muth <craig.muth@gmail.com>
