@@ -29,7 +29,7 @@
   set directory=/tmp/
 
 " show cursor crosshairs
-  set cursorcolumn cursorline
+"  set cursorcolumn cursorline
 
 " pick up external file modifications
   set autoread
