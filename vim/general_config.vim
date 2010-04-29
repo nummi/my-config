@@ -1,55 +1,68 @@
-  scriptencoding utf-8
-
-" Set temporary directory (don't litter local dir with swp/tmp files)
-  set directory=/tmp/
-
-" have one hundred lines of command-line (etc) history:
-  set history=100
-
-" Show us the command we're typing
-  set showcmd
-
-" Highlight matching parens
-  set showmatch
-  set completeopt=menu,preview
-  
-" Use the tab complete menu
-  set wildmenu 
-  set wildmode=list:longest,full
-
-" have the mouse enabled all the time:
-  set mouse=a
-
-" don't make it look like there are line breaks where there aren't:
+" don't wrap long lines
   set nowrap
 
-" use indents of 2 spaces, and have them copied down lines:
-  set expandtab
-  set tabstop=2
-  set softtabstop=2 
-  set shiftwidth=2
+" show commands as we type them
+  set showcmd
 
-  set autoindent
-"  set smartindent
+" highlight matching brackets
+  set showmatch
+
+" scroll the window when we get near the edge
+  set scrolloff=4 sidescrolloff=10
   
-" Set to auto read when a file is changed from the outside
-  set autoread
+" use 2 spaces for tabs
+  set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
-" show the `best match so far' as search strings are typed:
+" enable line numbers, and don't make them any wider than necessary
+  set number numberwidth=2
+
+" show the first match as search strings are typed
   set incsearch
 
 " searching is case insensitive when all lowercase
-  set ignorecase
-  set smartcase
+  set ignorecase smartcase
  
-" assume the /g flag on :s substitutions to replace all matches in a line:
+" assume the /g flag on substitutions to replace all matches in a line
   set gdefault
+
+" set temporary directory (don't litter local dir with swp/tmp files)
+  set directory=/tmp/
+
+" show cursor crosshairs
+  set cursorcolumn cursorline
+
+" pick up external file modifications
+  set autoread
+
+" don't abandon buffers when unloading
+  set hidden
+
+" match indentation of previous line
+  set autoindent
+
+" don't blink the cursor
+  set guicursor=a:blinkon0
+
+" show current line info (current/total)
+  set ruler rulerformat=%=%l/%L
+
+" don't show status line (other than between split windows)
+  set laststatus=0
+
+" don't beep for errors
+  set visualbell
 
 " make backspace work in insert mode
   set backspace=indent,eol,start
 
+" have the mouse enabled all the time
+  set mouse=a
+  
+" use tab-complete to see a list of possiblities when entering commands
+  set wildmenu 
+
+" allow lots of tabs
+  set tabpagemax=20
+
 " remember last position in file
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
-
-" Use CSS syntax highlighting for LESS
-au BufRead,BufNewFile *.less setfiletype css
