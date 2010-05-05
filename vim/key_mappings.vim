@@ -26,6 +26,9 @@
 " close all other windows (in the current tab)
   nmap gW :only<cr>
 
+" Toggle NERDTree
+  nmap gt :NERDTreeToggle<cr>
+
 " close all other tabs
   nmap gT :tabonly<cr>
 
