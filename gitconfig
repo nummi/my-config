@@ -28,7 +28,7 @@
 
 [core]
   legacyheaders = false
-	autocrlf = true
+	autocrlf = false
 
 [repack]
   usedeltabaseoffset = true
