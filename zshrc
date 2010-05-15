@@ -15,7 +15,6 @@ done
 PR_NO_COLOUR="%{$terminfo[sgr0]%}"
 
 source ~/.zsh/functions.zsh
-source ~/.zsh/options.zsh
 source ~/.zsh/exports.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/bindkeys.zsh
@@ -23,3 +22,4 @@ source ~/.zsh/completion_rake.zsh
 source ~/.zsh/history.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/prompt.zsh
+source ~/.zsh/set_options.zsh
