@@ -2,9 +2,12 @@ alias :='cd ..'
 alias ::='cd ../..'
 alias :::='cd ../../..'
 
+alias ajaxrdoc="rdoc --fmt ajax --exclude '.*generator.*' --exclude '.*test.*' --exclude '.*spec.*'"
+
 alias c='clear'
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy"
 
+alias devlog='tail -200 -f log/development.log'
 alias diff='clear; git diff'
 
 alias gfo='git fetch origin'
@@ -25,12 +28,17 @@ alias opi='open ./public/images'
 
 alias pull='clear; git pull'
 alias push='clear; git push'
-alias pushed\?='pushed'
+alias pushed\?='pushed' # pushed() is defined in functions.zsh
 
+alias restart='touch tmp/restart.txt'
 alias rmate='mate app config doc db features lib public script spec test stories liquid'
+alias rc='./script/rails console'
+alias rg='./script/rails generate'
+alias rs='./script/rails server'
 
 alias sc='./script/console'
 alias sp='./script/spec -cfs'
 alias ss='./script/server'
 alias st='clear; git status'
-alias sudo='nocorrect sudo'
+
+alias testlog='tail -200 -f log/test.log'
