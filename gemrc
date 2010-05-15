@@ -5,7 +5,7 @@
 gem: --no-ri --no-rdoc
 :sources: 
 - http://gemcutter.org
-- http://gems.rubyforge.org
+- http://rubyforge.org
 - http://gems.github.com
 - http://rubygems.org
 :backtrace: false
