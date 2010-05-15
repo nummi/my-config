@@ -1,7 +1,7 @@
 setopt always_to_end            # When complete from middle, move cursor
 setopt append_history           # Append to history file, not overwrite it
 setopt auto_cd                  # If a command is not in the hash table, and there exists an executable directory by that name, perform the cd command to that directory.
-setopt complete_in_word         # Not just at the end
+setopt complete_in_word         # Always auto complete, not just at the end
 setopt extendedglob             # Extra filename generation features
 setopt hist_ignore_dups         # Don't enter command in history if it is duplicate of previous command
 setopt hist_find_no_dups        # Don't display duplicates when searching commands
