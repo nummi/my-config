@@ -28,25 +28,30 @@
 
 [core]
   legacyheaders = false
-	autocrlf = false
+	autocrlf      = false
 
 [repack]
   usedeltabaseoffset = true
 
 [alias]
+  br   = branch
+  ch   = cherry -v origin
   ci   = commit
   co   = checkout
-  st   = status
-  ch   = cherry -v origin
+  df   = diff
   mine = log --author=Jerry
+  st   = status
 
 [diff "ruby"]
   funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
 
 [git-pair]
-	authors = Adam McCrea <adam@edgecase.com>
-	authors = Leon Gersing <fallenrogue@gmail.com>
-	authors = Felix Flores <felix@edgecase.com>
-	authors = Jerry Nummi <jerry@edgecase.com>
 	authors = John Andrews <john.m.andrews@gmail.com>
-	authors = Craig Muth <craig.muth@gmail.com>
+	authors = Ken Barker <ken@theedgecase.com>
+	authors = Kevin Farst <kevin@edgecase.com>
+	authors = Felix Flores <felix@edgecase.com>
+	authors = Leon Gersing <fallenrogue@gmail.com>
+	authors = Adam McCrea <adam@edgecase.com>
+	authors = Jerry Nummi <jerry@edgecase.com>
+	authors = Joe O'Brien <joe@theedgecase.com>
+	authors = Marc Peabody <marc@edgecase.com>
