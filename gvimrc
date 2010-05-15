@@ -5,3 +5,4 @@ set lines=40 columns=140
 set fuoptions=maxvert,maxhorz
 
 colors wombat
+set transparency=2
