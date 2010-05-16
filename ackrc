@@ -4,14 +4,16 @@
 --type-add=css=.sass,.less
 --type-set=cucumber=.feature
 
---ignore-dir=vendor
---ignore-dir=log
---ignore-dir=tmp
---ignore-dir=doc
 --ignore-dir=coverage
+--ignore-dir=doc
+--ignore-dir=fixtures
+--ignore-dir=log
+--ignore-dir=script
 --ignore-dir=system
+--ignore-dir=tmp
+--ignore-dir=vendor
 
---sort-files
 --color
 --follow
 --group
+--sort-files
