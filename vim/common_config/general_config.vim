@@ -46,8 +46,8 @@
 " show current line info (current/total)
   set ruler rulerformat=%=%l/%L
 
-" don't show status line (other than between split windows)
-  set laststatus=0
+" show status line
+  set laststatus=2
 
 " don't beep for errors
   set visualbell
@@ -66,3 +66,6 @@
 
 " remember last position in file
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+
+" Status line at bottom of window
+  set statusline=%{fugitive#statusline()}\ %f
