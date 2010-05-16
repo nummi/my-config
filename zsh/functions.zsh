@@ -1,15 +1,5 @@
 function cd() { builtin cd $1 && ls }
 
-# Force 'sudo zsh' to start root as a loging shell to 
-# avoid problems with environment clashes
-function sudo() {
-  if [[ $1 = "zsh" ]]; then
-    command sudo /opt/local/bin/zsh -l
-  else
-    command sudo "$@"
-  fi
-}
-
 function git_branch_name() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
