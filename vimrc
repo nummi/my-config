@@ -1,6 +1,6 @@
-runtime general_config.vim
-runtime key_mappings.vim
-runtime plugin_config.vim
-runtime ui_config.vim
+runtime! common_config/*.vim
 
-colors twilight
+" attempt to load a custom config for the currently logged in user
+runtime! custom_config/`whoami`.vim
+:filetype plugin on
+:abbr hte the
