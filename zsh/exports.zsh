@@ -1,25 +1,14 @@
-# START: Set the DISPLAY 
-if [[ -z $DISPLAY && -z $SSH_CONNECTION && -o interactive ]]; then
-
-  disp_no=($( ps -wwx | grep -F X11.app | awk '{print $NF}' | grep -e ":[0-9]"  ))
-
-  if [[ -n $disp_no ]];then
-    export DISPLAY=${disp_no}.0
-  else
-    # FAILSAFE: dumb setting of DISPLAY gives a monochromatic message
-    export DISPLAY=:0.0
-  fi
-fi
-# END: Set the DISPLAY
-
 export PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/sw/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/mongodb/bin"
-export EVENT_NOKQUEUE=1 # for memcache
+export CDPATH=$CDPATH:~/Projects:~/Projects/edgecase:~/Projects/edgecase/clients
 
-export EDITOR=vim
+export RUBYOPT='rubygems -Itest'
+export GIT_EDITOR="vim"
+export EDITOR="mvim"
+export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home'
+if [[ $TERM != 'dumb' ]]; then
+  export TERM=xterm-color;
+fi
 
-export ARCHFLAGS='-arch x86_64'
-
-export TERM=xterm-color
+export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
-
-export CDPATH=$CDPATH:~/Projects:~/Projects/edgecase:~/Projects/edgecase/clients:~/Projects/relevance
+export ARCHFLAGS='-arch x86_64'
