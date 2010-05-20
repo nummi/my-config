@@ -20,14 +20,15 @@
 " switch windows
   nmap gw 
 
+" open project view
+
+  nmap gt :NERDTreeToggle<cr>
+
 " close current window
   nmap gq :q<cr>
 
 " close all other windows (in the current tab)
   nmap gW :only<cr>
-
-" Toggle NERDTree
-  nmap gt :NERDTreeToggle<cr>
 
 " close all other tabs
   nmap gT :tabonly<cr>
@@ -56,10 +57,14 @@
 " open the source in a browser for distribution or copying as RTF
   nmap gH :OpenHtml<cr>
 
- 
-" Fuzzy Finder - \t to launch; \b just for buffers; cmd-enter to open selected file in new tab
-  let g:FuzzyFinderOptions = { 'Base':{} }
-  let g:FuzzyFinderOptions.Base.key_open_tab = '<D-CR>'
-  nmap <Leader>t :FuzzyFinderTextMate<cr> 
-  nmap <Leader>b :FuzzyFinderBuffer<cr> 
-  nmap <Leader>f :ruby finder.rescan!<cr>
+" Fuzzy Finder - cmd-enter to open selected file in new tab
+  let g:fuf_keyOpenTabpage = '<D-CR>'
+  nmap <Leader>t :FufFile<cr> 
+  nmap <Leader>b :FufBuffer<cr> 
+  nmap <Leader>f :FufRenewCache<cr> 
+
+" mapping the jumping between splits. Hold control while using vim nav.
+  nmap <C-J> <C-W>j<cr>
+  nmap <C-K> <C-W>k<cr>
+  nmap <C-H> <C-W>h<cr>
+  nmap <C-L> <C-W>l<cr>

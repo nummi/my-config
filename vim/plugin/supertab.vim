@@ -570,4 +570,3 @@ endfunction " }}}
 call s:Init()
 
 " vim:ft=vim:fdm=marker
-
