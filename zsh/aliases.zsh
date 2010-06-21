@@ -3,8 +3,9 @@ alias c='clear'
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy" # copy path to clipboard
 alias grep='grep --color --line-number'
 alias gvim='mvim -p'
-alias ll='ls -lF' # long format listing; add / to end of directories
-alias la='ls -aF' # include dot files in listing; add / to end of directories
+alias la='ls -a' # include dot files in listing
+alias ll='ls -l' # long format listing
+alias ls='ls -F'  # show / at end of directories
 alias mv='mv -i' # prompt before moving a file that would overwrite an existing file
 
 
@@ -14,9 +15,9 @@ alias preview='open -a Preview'
 
 # Databses
 
-alias mysql='/opt/local/bin/mysql5 -u root --socket=/tmp/mysql.sock'
-alias mysqladmin='/opt/local/bin/mysqladmin5 -u root --socket=/tmp/mysql.sock'
-alias mysql_config='/opt/local/bin/mysql_config5'
+# alias mysql='/usr/local/bin/mysql -u root --socket=/tmp/mysql.sock'
+# alias mysqladmin='/usr/local/bin/mysqladmin -u root --socket=/tmp/mysql.sock'
+# alias mysql_config='/usr/local/bin/mysql_config'
 alias postgres_start='pg_ctl -D ~/.pgdata -l ~/.pgdata/psql.log start'
 alias postgres_stop='pg_ctl -D ~/.pgdata stop'
 
