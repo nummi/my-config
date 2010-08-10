@@ -9,6 +9,7 @@ alias ls='ls -F'  # show / at end of directories
 alias mv='mv -i' # prompt before moving a file that would overwrite an existing file
 
 
+alias opi='open public/images'
 alias icons='cd ~/Pictures/icons; open -a Preview **/*.png **/*.tiff  **/*.jpg'
 alias preview='open -a Preview'
 
