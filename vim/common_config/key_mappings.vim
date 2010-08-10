@@ -21,7 +21,6 @@
   nmap gw 
 
 " open project view
-
   nmap gt :NERDTreeToggle<cr>
 
 " close current window
@@ -29,12 +28,6 @@
 
 " close all other windows (in the current tab)
   nmap gW :only<cr>
-
-" close all other tabs
-  nmap gT :tabonly<cr>
-
-" go to the directory listing for the current file
-  nmap gd :e %:h<cr>
 
 " go to the alternate file (previous buffer) with g-enter
   nmap g 
@@ -68,3 +61,6 @@
   nmap <C-K> <C-W>k<cr>
   nmap <C-H> <C-W>h<cr>
   nmap <C-L> <C-W>l<cr>
+
+" shortcut for =>
+  imap <C-l> <Space>=><Space>
