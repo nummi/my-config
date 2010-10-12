@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/nummi/Projects/edgecase/clients/janova'
 let g:netrw_dirhist_2='/Users/nummi/Projects/edgecase/edgecase.com2010'
 let g:netrw_dirhist_3='/Users/nummi/Projects/edgecase/edgecase.com2010/views'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/Users/nummi/Projects/edgecase/edgecase.com2010'
 let g:netrw_dirhist_5='/Users/nummi/Dropbox/Projects/edgecase/Erubycon 2010/web/splash/site'
 let g:netrw_dirhist_6='/Users/nummi/Projects/sparksforipad.com'
 let g:netrw_dirhist_7='/Users/nummi/Projects/edgecase/edgecase.com2010'
+let g:netrw_dirhist_8='/Users/nummi/Projects/myconfig'
