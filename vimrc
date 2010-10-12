@@ -4,4 +4,3 @@ runtime! common_config/*.vim
 runtime! custom_config/`whoami`.vim
 :filetype plugin on
 :abbr hte the
-

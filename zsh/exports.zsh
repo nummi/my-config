@@ -5,6 +5,7 @@ export RUBYOPT='rubygems -Itest'
 export GIT_EDITOR="vim"
 export EDITOR="mvim"
 export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home'
+
 if [[ $TERM != 'dumb' ]]; then
   export TERM=xterm-color;
 fi

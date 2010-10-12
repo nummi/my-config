@@ -64,3 +64,5 @@
 
 " shortcut for =>
   imap <C-l> <Space>=><Space>
+
+nnoremap ; :
