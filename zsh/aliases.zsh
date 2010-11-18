@@ -3,6 +3,7 @@ alias ::="cd ../.."
 alias :::="cd ../../.."
 
 alias c='clear'
+alias compile='git push origin master; git push heroku master'
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy" # copy path to clipboard
 alias grep='grep --color --line-number'
 alias la='ls -laF' # include dot files in listing

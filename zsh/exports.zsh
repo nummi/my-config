@@ -1,6 +1,6 @@
 export PATH=/usr/local/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/share/npm/bin
 export CDPATH=$CDPATH:~/Projects:~/Projects/edgecase:~/Projects/edgecase/clients
-
+export NODE_PATH="/usr/local/lib/node"
 export RUBYOPT='rubygems -Itest'
 export GIT_EDITOR="vim"
 export EDITOR="mvim"
