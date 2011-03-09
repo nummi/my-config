@@ -14,9 +14,10 @@ alias opi='open public/images'
 
 # Databses
 
-# alias mysql='/usr/local/bin/mysql -u root --socket=/tmp/mysql.sock'
-# alias mysqladmin='/usr/local/bin/mysqladmin -u root --socket=/tmp/mysql.sock'
-# alias mysql_config='/usr/local/bin/mysql_config'
+alias mysql_start='cd /usr/local/Cellar/mysql/5.1.55 ; /usr/local/Cellar/mysql/5.1.55/bin/mysqld_safe &'
+#alias mysql='/usr/local/bin/mysql -u root --socket=/tmp/mysql.sock'
+#alias mysqladmin='/usr/local/bin/mysqladmin -u root --socket=/tmp/mysql.sock'
+#alias mysql_config='/usr/local/bin/mysql_config'
 alias postgres_start='pg_ctl -D ~/.pgdata -l ~/.pgdata/psql.log start'
 alias postgres_stop='pg_ctl -D ~/.pgdata stop'
 

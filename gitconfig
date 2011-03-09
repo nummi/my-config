@@ -1,6 +1,6 @@
 [user]
- name  = Jerry Nummi
- email = jerry@edgecase.com
+	name = Jerry Nummi
+	email = jerry@edgecase.com
 
 [color]
   branch = auto
@@ -29,6 +29,7 @@
 [core]
   legacyheaders = false
 	autocrlf      = false
+	excludesfile = /Users/nummi/.gitignore_global
 
 [repack]
   usedeltabaseoffset = true
@@ -55,3 +56,9 @@
 	authors = Jerry Nummi <jerry@edgecase.com>
 	authors = Joe O'Brien <joe@theedgecase.com>
 	authors = Marc Peabody <marc@edgecase.com>
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
