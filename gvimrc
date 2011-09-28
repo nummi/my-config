@@ -22,7 +22,7 @@
 
 " pretty but not terminal-compatible color scheme
   set background=dark
-  colors mustang
+  colors darkblue2
 
 " attempt to load a custom config for the currently logged in user
   runtime! custom_config/`whoami`.gvim

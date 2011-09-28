@@ -1,6 +1,6 @@
 [user]
 	name = Jerry Nummi
-	email = jerry@edgecase.com
+  email = jerry@edgecase.com
 
 [color]
   branch = auto
@@ -28,8 +28,8 @@
 
 [core]
   legacyheaders = false
-	autocrlf      = false
-	excludesfile = /Users/nummi/.gitignore_global
+  autocrlf      = false
+  excludesfile = /Users/nummi/.gitignore_global
 
 [repack]
   usedeltabaseoffset = true
@@ -40,25 +40,28 @@
   ci   = commit
   co   = checkout
   df   = diff
+  dump = cat-file -p
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   mine = log --author=Jerry
   st   = status
+  type = cat-file -t
 
 [diff "ruby"]
   funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
 
 [git-pair]
-	authors = John Andrews <john.m.andrews@gmail.com>
-	authors = Ken Barker <ken@theedgecase.com>
-	authors = Kevin Farst <kevin@edgecase.com>
-	authors = Felix Flores <felix@edgecase.com>
-	authors = Leon Gersing <fallenrogue@gmail.com>
-	authors = Adam McCrea <adam@edgecase.com>
-	authors = Jerry Nummi <jerry@edgecase.com>
-	authors = Joe O'Brien <joe@theedgecase.com>
-	authors = Marc Peabody <marc@edgecase.com>
+  authors = John Andrews <john.m.andrews@gmail.com>
+  authors = Ken Barker <ken@theedgecase.com>
+  authors = Kevin Farst <kevin@edgecase.com>
+  authors = Felix Flores <felix@edgecase.com>
+  authors = Leon Gersing <fallenrogue@gmail.com>
+  authors = Adam McCrea <adam@edgecase.com>
+  authors = Jerry Nummi <jerry@edgecase.com>
+  authors = Joe O'Brien <joe@theedgecase.com>
+  authors = Marc Peabody <marc@edgecase.com>
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true

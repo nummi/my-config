@@ -1,7 +1,3 @@
-alias :="cd .."
-alias ::="cd ../.."
-alias :::="cd ../../.."
-
 alias c='clear'
 alias compile='git push origin master; git push heroku master'
 alias cpwd="pwd | ruby -pe'\$_.chomp!' | pbcopy" # copy path to clipboard
@@ -14,7 +10,7 @@ alias opi='open public/images'
 
 # Databses
 
-alias mysql_start='cd /usr/local/Cellar/mysql/5.1.55 ; /usr/local/Cellar/mysql/5.1.55/bin/mysqld_safe &'
+alias mysql_start='/usr/local/Cellar/mysql/5.5.10/bin/mysqld_safe &'
 #alias mysql='/usr/local/bin/mysql -u root --socket=/tmp/mysql.sock'
 #alias mysqladmin='/usr/local/bin/mysqladmin -u root --socket=/tmp/mysql.sock'
 #alias mysql_config='/usr/local/bin/mysql_config'
