@@ -12,17 +12,13 @@
   set fuoptions=maxvert,maxhorz
 
 " use a big, pretty font
-  set guifont=Menlo:h14
+  set guifont=Monaco:h15
 
 " initial window size
-  set lines=65 columns=160
-
-" be partially transparent
-"  set transparency=3
+  set lines=45 columns=120
 
 " pretty but not terminal-compatible color scheme
   set background=dark
-  colors darkblue2
+  colors twilight2
 
-" attempt to load a custom config for the currently logged in user
-  runtime! custom_config/`whoami`.gvim
+runtime! custom_config/*.gvim

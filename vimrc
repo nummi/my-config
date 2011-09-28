@@ -1,9 +1,6 @@
 " bring in the bundles
-call pathogen#runtime_append_all_bundles()
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
 
 runtime! common_config/*.vim
-
-" attempt to load a custom config for the currently logged in user
-runtime! custom_config/`whoami`.vim
-
-let g:LustyJugglerSuppressRubyWarning = 1
+runtime! custom_config/*.vim

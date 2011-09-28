@@ -1,6 +1,13 @@
 " required for several plugins
   set nocompatible
 
+" enable syntax highlighting
+  syntax on
+
+" default color scheme
+  set background=dark
+  color twilight2
+
 " don't wrap long lines
   set nowrap
 
@@ -23,9 +30,12 @@
 " show the first match as search strings are typed
   set incsearch
 
+" highlight the search matches
+  set hlsearch
+
 " searching is case insensitive when all lowercase
   set ignorecase smartcase
- 
+
 " assume the /g flag on substitutions to replace all matches in a line
   set gdefault
 
@@ -92,3 +102,5 @@
 " remember last position in file
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
+" Thorfile, Rakefile, Vagrantfile, and Gemfile are Ruby
+  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
