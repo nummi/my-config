@@ -30,9 +30,6 @@
 " show the first match as search strings are typed
   set incsearch
 
-" highlight the search matches
-  set hlsearch
-
 " searching is case insensitive when all lowercase
   set ignorecase smartcase
 
