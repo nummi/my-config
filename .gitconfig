@@ -1,0 +1,83 @@
+[user]
+  name = Jerry Nummi
+  email = jerry@edgecase.com
+
+[color]
+  branch = auto
+  diff   = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local   = yellow
+  remote  = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old  = red bold
+  new  = green bold
+
+[color "status"]
+  added     = yellow
+  changed   = green
+  untracked = cyan
+
+[merge]
+  tool = opendiff
+
+[core]
+  legacyheaders = false
+  excludesfile  = /Users/pairing/.gitignore
+
+[repack]
+  usedeltabaseoffset = true
+
+[alias]
+  br   = branch
+  ch   = cherry -v origin
+  ci   = commit
+  co   = checkout
+  df   = diff
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  lg   = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --graph --abbrev-commit --date=relative  
+  mine = log --author=Jerry
+  put  = "push origin HEAD"
+  st   = status
+  type = cat-file -t
+
+[diff "ruby"]
+  funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
+
+[push]
+  default = matching
+
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+
+[git-pair]
+  authors = Aaron Christy <aaron@edgecase.com>
+  authors = Adam McCrea <adam@edgecase.com>
+  authors = Andrew Grieser <andrew@edgecase.com>
+  authors = Felix Flores <felix@edgecase.com>
+  authors = Jerry Nummi <jerry@edgecase.com>
+  authors = Jim Weirich <jim@edgecase.com>
+  authors = Joe O'Brien <joe@theedgecase.com>
+  authors = Ken Barker <ken@theedgecase.com>
+  authors = Leon Gersing <leongersing@gmail.com>
+  authors = Marc Peabody <marc@edgecase.com>
+  authors = Matt Darby <matt.darby@edgecase.com>
+  authors = Matt Yoho <mby@mattyoho.com>
+  authors = Matthew Boston <matthew.boston@edgecase.com>
+  authors = Mike Enriquez <mike@enriquez.me>
+  authors = Monica McJunkin <monica@theedgecase.com>
+  authors = Paul Wilson <paul@edgecase.com>
+  authors = Scott Barron <scott@edgecase.com>
+  authors = Scott Walker <scott.walker@edgecase.com>
+  authors = Tony Schneider <tonywok@gmail.com>
+  authors = Tyler Wymer <twymer@gmail.com>
+  authors = Matt Jones <matt.jones@edgecase.com>
+
+[init]
+  templatedir = ~/.git_template
