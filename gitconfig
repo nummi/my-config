@@ -29,7 +29,8 @@
 [core]
   legacyheaders = false
   autocrlf      = false
-  excludesfile = /Users/nummi/.gitignore_global
+	excludesfile = /Users/nummi/.gitignore_global
+	quotepath = false
 
 [repack]
   usedeltabaseoffset = true
@@ -60,8 +61,8 @@
   authors = Joe O'Brien <joe@theedgecase.com>
   authors = Marc Peabody <marc@edgecase.com>
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
