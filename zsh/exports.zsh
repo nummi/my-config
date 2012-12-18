@@ -1,11 +1,12 @@
 export ARCHFLAGS='-arch x86_64'
 #export CC=/usr/bin/gcc-4.2
-export CC=/usr/local/bin/gcc-4.2
+#export CC=/usr/local/bin/gcc-4.2
+export CC=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/gcc-4.2
 export CDPATH=$CDPATH:/Applications/Xcode.app/Contents/Developer/usr/bin/
 export CDPATH=$CDPATH:~/Projects:~/Projects/edgecase:~/Projects/edgecase/clients
 export CLICOLOR=1
 export EDITOR="mvim"
-export GIT_EDITOR="vim"
+export GIT_EDITOR="mvim -v"
 export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home'
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export NODE_PATH="/usr/local/lib/node"

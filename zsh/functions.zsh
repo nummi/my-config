@@ -2,13 +2,13 @@
 function cd() { builtin cd $1 && ls }
 
 # Put the string "hostname::/full/directory/path" in the title bar:
-set_term_title() { 
-  echo -ne "\e]2;$PWD\a" 
+set_term_title() {
+  echo -ne "\e]2;$PWD\a"
 }
 
 # Put the parentdir/currentdir in the tab
 set_term_tab() {
-  echo -ne "\e]1;$PWD:h:t/$PWD:t\a" 
+  echo -ne "\e]1;$PWD:h:t/$PWD:t\a"
 }
 
 set_prompt() {
@@ -54,4 +54,8 @@ git_branch_name() {
 
 git_author_name() {
   git config --get user.name | sed 's/\([a-zA-Z+]\)[a-zA-Z]* */\1/g' | tr '[A-Z]' '[a-z]'
+}
+
+function ack_to_vim() {
+  ack -l $* | xargs mvim -p
 }
