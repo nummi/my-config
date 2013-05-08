@@ -1,17 +1,17 @@
 require 'rubygems'
 require 'rake'
 
-task :symlink do
-  symlink
+task :sym do
+  sym
 end
 
-namespace :symlink do
+namespace :sym do
   task :force do
-    symlink(true)
+    sym(true)
   end
 end
 
-def symlink(force = false)
+def sym(force = false)
   dir = File.dirname(__FILE__)
   force = force ? '-Ff' : ''
   excluded_files = ['.git', '.', '..', 'Rakefile', 'README.md']
