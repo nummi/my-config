@@ -9,8 +9,9 @@ alias mv='mv -i'   # prompt before moving a file that would overwrite an existin
 alias mysql='/usr/local/bin/mysql -u root --socket=/tmp/mysql.sock'
 alias mysqladmin='/usr/local/bin/mysqladmin -u root --socket=/tmp/mysql.sock'
 alias mysql_config='/usr/local/bin/mysql_config'
-alias postgres_start='pg_ctl -D ~/.pgdata -l ~/.pgdata/psql.log start'
-alias postgres_stop='pg_ctl -D ~/.pgdata stop'
+alias pg_start='pg_ctl -l /usr/local/var/postgres/server.log start'
+alias pg_status='pg_ctl status'
+alias pg_stop='pg_ctl stop -s -m fast'
 
 # Rack
 
@@ -21,8 +22,9 @@ alias ru='bundle exec rackup config.ru'
 alias be='bundle exec'
 alias oai='open app/assets/images'
 alias opi='open public/images'
-alias rmate='mate app config doc db features lib public script spec test stories liquid'
-alias restart='touch tmp/restart.txt'
+alias rc='bundle exec rails c'
+alias rg='bundle exec rails g'
+alias rs='bundle exec rails s'
 
 # Git
 
@@ -30,3 +32,8 @@ alias gitrm='git ls-files --deleted | xargs git rm'
 alias gitx='gitx --all'
 alias push='git push'
 alias st='clear; git status'
+
+# history
+alias sudo='sudo ' # allow running sudo against an alias
+alias redo='`cat $HOME/.zsh_history | tail -n2 | head -n1`' # run last command again
+alias now='sudo redo' # I meant sudo on that last command
