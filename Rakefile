@@ -11,7 +11,7 @@ namespace :sym do
   end
 end
 
-def sym(force = false)
+def sym(force = true)
   dir = File.dirname(__FILE__)
   force = force ? '-Ff' : ''
   excluded_files = ['.git', '.', '..', 'Rakefile', 'README.md']

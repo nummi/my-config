@@ -1,5 +1,5 @@
 [user]
-	name = Jerry Nummi
+  name = Jerry Nummi
   email = jerry@edgecase.com
 
 [color]
@@ -29,8 +29,8 @@
 [core]
   legacyheaders = false
   autocrlf      = false
-	excludesfile = /Users/nummi/.gitignore_global
-	quotepath = false
+  excludesfile = /Users/nummi/.gitignore_global
+  quotepath = false
 
 [repack]
   usedeltabaseoffset = true
@@ -44,6 +44,7 @@
   dump = cat-file -p
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   mine = log --author=Jerry
+  put  = "push origin HEAD"
   st   = status
   type = cat-file -t
 
@@ -61,8 +62,10 @@
   authors = Joe O'Brien <joe@theedgecase.com>
   authors = Marc Peabody <marc@edgecase.com>
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[credential]
+  helper = osxkeychain

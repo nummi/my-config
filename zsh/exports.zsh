@@ -1,7 +1,7 @@
 export ARCHFLAGS='-arch x86_64'
 #export CC=/usr/bin/gcc-4.2
 #export CC=/usr/local/bin/gcc-4.2
-export CC=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/gcc-4.2
+#export CC=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/gcc-4.2
 export CDPATH=$CDPATH:/Applications/Xcode.app/Contents/Developer/usr/bin/
 export CDPATH=$CDPATH:~/Projects:~/Projects/edgecase:~/Projects/edgecase/clients
 export CLICOLOR=1
