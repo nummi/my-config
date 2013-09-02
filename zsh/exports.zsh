@@ -12,6 +12,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 export NODE_PATH="/usr/local/lib/node"
 export PATH=/usr/local/bin:/opt/local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/git/bin:/Developer/usr/bin:/usr/local/Cellar:~/bin
 export RUBYOPT='rubygems -Itest'
+export PGDATA='/usr/local/var/postgres'
 
 if [[ $TERM != 'dumb' ]]; then
   export TERM=xterm-color;
