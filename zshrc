@@ -1,6 +1,7 @@
 autoload -U compinit && compinit
 autoload colors && colors
 
+source `which ~/.zsh/Tmuxinator.zsh`
 source ~/.zsh/aliases.zsh
 source ~/.zsh/bindkeys.zsh
 source ~/.zsh/completion.zsh
