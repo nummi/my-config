@@ -25,3 +25,6 @@ export RIPDIR RUBYLIB PATH
 export PATH="/usr/local/heroku/bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+
+ulimit -n 2048
