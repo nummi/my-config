@@ -26,5 +26,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+# T2 API stuff:
+GOOGLE_CLIENT_ID="480140443980.apps.googleusercontent.com"
+GOOGLE_SECRET="v03dRPvKlgn_OsK79MXSDn5j"
 
 ulimit -n 2048
