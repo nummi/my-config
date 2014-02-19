@@ -22,5 +22,8 @@ alias gitrm='git ls-files --deleted | xargs git rm'
 alias gitx='gitx --all'
 alias st='clear; git status'
 
+# Git && Vim
+alias resolve='mvim -p $(git diff --name-only --diff-filter=U | xargs)'
+
 # history
 alias sudo='sudo ' # allow running sudo against an alias
