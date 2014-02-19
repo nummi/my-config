@@ -12,7 +12,7 @@ source ~/.zsh/history.zsh
 source ~/.zsh/prompt.zsh
 source ~/.zsh/set_options.zsh
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+source /Users/nummi/.rvm/scripts/rvm
 
 # -- start rip config -- #
 RIPDIR=/Users/nummi/.rip
