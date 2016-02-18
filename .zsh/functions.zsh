@@ -1,3 +1,5 @@
+function anybar { echo -n $1 | nc -4u -w0 localhost ${2:-1738}; }
+
 # Echo directory contents when changing directories
 function cd() { builtin cd $1 && ls }
 
@@ -58,4 +60,15 @@ git_author_name() {
 
 function ack_to_vim() {
   ack -l $* | xargs mvim -p
+}
+
+function check_branches {
+  for sha in `git log origin/acceptance..$1 --oneline --format="%H"` ; do
+    (git branch --remote --contains $sha | grep release-candidate) > /dev/null
+    if [ $? -eq 0 ] ; then
+      echo $'\e[32m' "$sha is in release-candidate" $'\e[0m'; 
+    else
+      echo $'\e[31m' "$sha is NOT in release-candidate" $'\e[0m'; 
+    fi
+  done
 }

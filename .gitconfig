@@ -1,6 +1,6 @@
 [user]
-  name = Jerry Nummi
-  email = jerry@neo.com
+	name = Jerry Nummi
+	email = jerry@mutuallyhuman.com
 
 [color]
   branch = auto
@@ -29,8 +29,9 @@
 [core]
   legacyheaders = false
   autocrlf      = false
-  excludesfile = /Users/nummi/.gitignore_global
+	excludesfile = /Users/nummi/.gitignore_global
   quotepath = false
+	editor = mvim
 
 [repack]
   usedeltabaseoffset = true
@@ -53,18 +54,33 @@
   funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
 
 [git-pair]
-  authors = Aaron Christy <aaron@neo.com>
-  authors = Felix Flores <felix@neo.com>
-  authors = Jerry Nummi <jerry@neo.com>
-  authors = Jim Weirich <jim@neo.com>
-  authors = Ken Barker <ken@theneo.com>
-  authors = Paul Wilson <paul@neo.com>
-  authors = Tony Schneider <tonywok@gmail.com>
-  authors = Matt Jones <matt.jones@neo.com>
-  authors = Alex Burkhart <saterus@gmail.com>
-  authors = John Andrews <john@neo.com>
+  authors = Jerry Nummi <jnummi@gmail.com>
 
 [credential]
   helper = osxkeychain
 [url "https://"]
 	insteadOf = git://
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[commit]
+	template = ~/.gitmessage
+[rerere]
+	enabled = true
