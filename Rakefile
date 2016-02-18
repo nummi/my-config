@@ -24,9 +24,6 @@ task :default do
       end
     end
   end
-
-  # symlink the rails-bootstrap folder so the shell script can find it
-  replace_file("rails-bootstrap")
 end
 
 
