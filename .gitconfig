@@ -1,6 +1,6 @@
 [user]
-	name = Jerry Nummi
-	email = jerry@mutuallyhuman.com
+  = Jerry Nummi
+  email = jerrynummi@me.com
 
 [color]
   branch = auto
@@ -29,9 +29,10 @@
 [core]
   legacyheaders = false
   autocrlf      = false
-	excludesfile = /Users/nummi/.gitignore_global
+  excludesfile = /Users/nummi/.gitignore_global
   quotepath = false
-	editor = mvim
+  editor = mvim
+  pager = diff-so-fancy | less --tabs=4 -RFX
 
 [repack]
   usedeltabaseoffset = true
@@ -41,14 +42,14 @@
   ch   = cherry -v origin
   ci   = commit
   co   = checkout
-  df   = diff
   dump = cat-file -p
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   mine = log --author=Jerry
   put  = "push origin HEAD"
   st   = status
   type = cat-file -t
-	undo = reset HEAD@{1}
+  undo = reset HEAD@{1}
+  list-br = branch --sort=committerdate
 
 [diff "ruby"]
   funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
@@ -58,29 +59,30 @@
 
 [credential]
   helper = osxkeychain
+
 [url "https://"]
-	insteadOf = git://
+  insteadOf = git://
+
 [filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+
 [push]
-	default = simple
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  default = simple
+
 [filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
+  required = true
+
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
-[commit]
-	template = ~/.gitmessage
+  clean = git lfs clean %f
+  smudge = git lfs smudge %f
+  required = true
+
 [rerere]
-	enabled = true
+  enabled = true
+
+[init]
+  defaultbranch = main
